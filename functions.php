@@ -114,23 +114,23 @@ function toc($content)
 }
 
 //处理目录树
-function handleToc($obj, $n, &$arr, &$html)
-{
-    $i = str_replace('h', '', $obj->tagName);
-    $j = end($arr);
-    if ($i > $j) {
-        $arr[] = $i;
-        $html .= '<ol>';
-    } else if ($i == $j)
-        $html .= '</li>';
-    else if (in_array($i, $arr)) {
-        $html .= '</li></ol>';
-        array_pop($arr);
-        handleToc($obj, $n, $arr, $html);
-        return;
-    } else {
-        $arr = [$i];
-        $html .= '</li>';
-    }
-    $html .= '<li><a href="#TOC' . $n . '">' . $obj->textContent . '</a>';
-}
+// function handleToc($obj, $n, &$arr, &$html)
+// {
+//     $i = str_replace('h', '', $obj->tagName);
+//     $j = end($arr);
+//     if ($i > $j) {
+//         $arr[] = $i;
+//         $html .= '<ol>';
+//     } else if ($i == $j)
+//         $html .= '</li>';
+//     else if (in_array($i, $arr)) {
+//         $html .= '</li></ol>';
+//         array_pop($arr);
+//         handleToc($obj, $n, $arr, $html);
+//         return;
+//     } else {
+//         $arr = [$i];
+//         $html .= '</li>';
+//     }
+//     $html .= '<li><a href="#TOC' . $n . '">' . $obj->textContent . '</a>';
+// }

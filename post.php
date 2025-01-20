@@ -28,12 +28,12 @@ $this->need('header.php');
 </main>
 
 <!-- test -->
-<div id="toc">
+<!-- <div id="toc">
     <div class="toc-left">
         <div class="toc-btn" type="button" onclick="changetoc()">></div>
     </div>
     <div class="TOC">目录树区域</div>
-</div>
+</div> -->
 
 
 <?php $this->need('footer.php'); ?>

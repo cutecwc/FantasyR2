@@ -13,6 +13,20 @@
 
 ---- */
 
+/* 
+# Kico Style 2.2
+# By: cutecwc
+# Last Update: 2025.1
+
+更新内容：
+
+简要修改了部分代码用于自用。
+
+本注释只在此处标明一次，其余部分与原作者或有不同，但不再赘述，一切以原作者为基准。
+
+ */
+
+
 /* 0 - 全局
 -------------------------------- */
 html, body,
@@ -100,7 +114,8 @@ body::-webkit-scrollbar-track:hover{
     box-sizing: content-box;
 }
 
-.wrap.min{ max-width: 800px }
+/* .wrap.min{ max-width: 800px } */
+.wrap.min{ max-width: 90% }
 .wrap.mid{ max-width: 1000px }
 .wrap.max{ max-width: 1400px }
 .wrap.full{ max-width: 100% }
@@ -1449,3 +1464,108 @@ iframe{
 :) Copyright (C) By Dreamer-Paul.
 
 ---- */
+
+/* -----------------------------------
+## 目录树 
+------------------------------------*/
+#toc {
+    --toc-width: 260px;
+    position: fixed;
+    top: 0;
+    /* right: 0px; */
+    right: calc(-1 * var(--toc-width));
+    height: 100vh;
+    width: var(--toc-width);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    z-index: 5;
+    transition: 0.5s;
+    -webkit-transition: 0.5s; /* Safari */
+}
+.tocwidth {
+    right: 0px !important;
+}
+  
+.toc-left {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    margin-left: -25px;
+    margin-right: -25px;
+    z-index: 6;
+}
+.toc-left .toc-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--bd-main);
+    cursor: pointer;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.15);
+}
+  
+.toc {
+    display: flex;
+    flex-wrap: nowrap;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bd-main);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.15);
+}
+  
+.toc > span {
+    background-color: var(--bd-main); /*自定义背景色*/
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+}
+  
+.toc ol {
+    list-style-type: none;
+    margin-left: 20px;
+    padding: 0;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+  
+.toc ol li {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-left: 0px;
+}
+  
+.toc ol ol {
+    padding-left: 5px;
+}
+  
+.toc li li {
+    padding-left: 5px;
+}
+  
+.toc ol li a {
+    display: block;
+    padding: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+  
+.toc ol li a:hover {
+    background-color: var(--bd-main);
+    color: white;
+}
+  

@@ -1,3 +1,4 @@
+<!-- 评论 -->
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php function threadedComments($comments, $options) {
     $commentClass = '';
@@ -46,7 +47,7 @@
                         <textarea rows="2" name="text" placeholder="说下感想吧！" required><?php $this->remember('text'); ?></textarea>
 <?php if(!$this->user->hasLogin()): ?>
                         <input type="text" name="author" placeholder="昵称 *：" value="<?php $this->remember('author'); ?>" required="">
-                        <input type="email" name="mail" placeholder="电邮 *：" value="<?php $this->remember('mail'); ?>"<?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?>>
+                        <input type="email" name="mail" placeholder="Email *：" value="<?php $this->remember('mail'); ?>"<?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?>>
                         <input type="url" name="url" placeholder="http://" value="<?php $this->remember('url'); ?>"<?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?>>
 <?php else: ?>
                         <p class="logined"><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>，欢迎回来！不是你？<a href="<?php $this->options->logoutUrl(); ?>" title="登出">登出</a></p>

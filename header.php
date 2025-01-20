@@ -40,7 +40,7 @@
     <div class="side-window">
         <div class="side-wrap">
             <form class="search-form" method="post">
-                <input type="text" name="s" placeholder="搜索什么？">
+                <input type="text" name="s" placeholder="输入关键词以检索...">
             </form>
             <div class="side-category color-bar">
                 <?php $this -> widget('Widget_Metas_Category_List') -> parse('<a href="{permalink}">{name}</a>'); ?>

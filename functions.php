@@ -72,7 +72,9 @@ function themeInit($archive){
 
     // AJAX 头像
     if(isset($_GET['action']) && $_GET['action'] == 'gravatar' && $_GET['email']){
-        $host = 'https://secure.gravatar.com/avatar/';
+        // $host = 'https://secure.gravatar.com/avatar/';
+        // https://cravatar.cn/avatar/
+        $host = 'https://cravatar.cn/avatar/';
         $email = strtolower($_GET['email']);
         $hash = md5($email);
 
@@ -81,4 +83,54 @@ function themeInit($archive){
         header("location: $reply");
         die();
     }
+}
+
+// post.php
+
+
+//生成目录树
+function toc($content)
+{
+    $html = '';
+    $dom =  new DOMDocument();
+    libxml_use_internal_errors(true);
+    $dom->loadHTML('<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><body>' . $content . '</body>');
+    libxml_use_internal_errors(false);
+    $xpath = new DOMXPath($dom);
+    $objs = $xpath->query('//h1|//h2|//h3|//h4|//h5|//h6');
+    if ($objs->length) {
+        $arr = [];
+        $html = '<div class="toc"><span>目录</span>';
+        foreach ($objs as $n => $obj) {
+            $obj->setAttribute('id', 'TOC' . $n);
+            handleToc($obj, $n, $arr, $html);
+        }
+        foreach ($arr as $n)
+            $html .= '</li></ol>';
+        $html .= '</div>';
+        $html = '<div id="toc"><div class="toc-left"><div class="toc-btn" type="button" οnclick="changetoc()">></div></div>' . $html .'</div>';
+    }
+    return $html;
+}
+
+//处理目录树
+function handleToc($obj, $n, &$arr, &$html)
+{
+    $i = str_replace('h', '', $obj->tagName);
+    $j = end($arr);
+    if ($i > $j) {
+        $arr[] = $i;
+        $html .= '<ol>';
+    } else if ($i == $j)
+        $html .= '</li>';
+    else if (in_array($i, $arr)) {
+        $html .= '</li></ol>';
+        array_pop($arr);
+        handleToc($obj, $n, $arr, $html);
+        return;
+    } else {
+        $arr = [$i];
+        $html .= '</li>';
+    }
+    $html .= '<li><a href="#TOC' . $n . '">' . $obj->textContent . '</a>';
 }

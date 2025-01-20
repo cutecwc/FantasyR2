@@ -302,3 +302,14 @@ function Kico_Style () {
 }
 
 var ks = new Kico_Style();
+
+// 推拉toc
+function changetoc() {
+    var e = document.getElementById("toc");
+    if (e.classList.contains("tocwidth")) {
+      e.classList.remove("tocwidth");
+    } else {
+      e.classList.add("tocwidth");
+    }
+}
+  

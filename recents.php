@@ -23,7 +23,7 @@ $this->need('header.php'); ?>
 
     <?php 
     // yes, i refered above is the value 'x' is it, to change the value, you can get the page by custom.
-    $x=100;
+    $x=25;
     $all=($stat->publishedPostsNum);
     //页数=向上取整（总归档数/每页文章数)；
     $pages=ceil($all/$x);

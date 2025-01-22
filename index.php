@@ -3,9 +3,9 @@
 /**
  * 一个优美梦幻的动漫风 Typecho 博客主题。
  *
- * @package FantasyV2
+ * @package FantasyR2
  * @author Paul & cutecwc
- * @version 0.30
+ * @version 0.31
  * the version based as follow.
  * @link https://paugram.com
  */
@@ -38,7 +38,7 @@ $this->need('header.php');
             <?php endwhile; ?>
             
         </section>
-        <?php $this->pageNav('<<=', '=>>', 3, '...', array('wrapTag' => 'section', 'itemTag' => 'span')); ?>
+        <?php $this->pageNav('', '', 3, '...', array('wrapTag' => 'section', 'itemTag' => 'span')); ?>
     </div>
 </main>
 

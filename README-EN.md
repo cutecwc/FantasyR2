@@ -1,13 +1,10 @@
-![Typecho Theme Fantasy Render Poster - Web Based Version](https://i.imgur.com/BF8J5tG.jpg "Fantasy")
-
-
-# Fantasy
-A Gorgeous, Fantastic Anime-Style Typecho Blog Theme. Based on The Official Website of Anime "Slow Start". <a href="README.md">中文文档</a>
+# FantasyR2
+A Gorgeous, Fantastic Anime-Style Typecho Blog Theme. Based on The Official Website of Anime "Slow Start". 
 
 ## How to Use It
 1. `Star` this project.
-1. Download the theme source code from [here](https://github.com/Dreamer-Paul/Fantasy/archive/master.zip).
-1. Upload the theme to your server，rename it to `Fantasy` then put it under the  `usr/themes/` content.
+1. Download the theme source code from the hub.
+1. Upload the theme to your server，rename it to `FantasyR2` then put it under the  `usr/themes/` content.
 1. Log in to your Typecho dashboard，select to enable the theme. Then enjoy it!
 
 ## Project Story
@@ -18,7 +15,7 @@ The project is released and authorise the `MIT` lisence. Base on that, you will 
 
 It isn't easy to develop this project! If you like it, please support me by `Star` it .
 
-At the same time welcome to [my blog](https://paugram.com/about.html#donate) and donate me, thank you!
+At the same time welcome to [the author's blog](https://paugram.com/about.html#donate) and donate, thks!
 
 ## Credit
 ### Used Opensource Project

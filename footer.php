@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-m-6 left bottom to-center">
 <?php if(in_array('verify', $this -> options -> footer_content) && $this -> options -> verify_num): ?>
-                    <p><a href="http://www.miitbeian.gov.cn" rel="nofollow" target="_blank"><?php $this -> options -> verify_num() ?></a></p>
+                    <p><a href="https://icp.gov.moe/" rel="nofollow" target="_blank"><?php $this -> options -> verify_num() ?></a></p>
 <?php endif; ?>
 <?php if(in_array('link', $this -> options -> footer_content) && $this -> options -> home_social): ?>
                     <p class="foot-social"><?php $this -> options -> home_social() ?></p>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-m-6 right bottom to-center">
                     <p>&copy; <?php echo date('Y') ?> <a href="<?php $this -> options -> siteUrl() ?>"><?php $this->options->title(); ?></a>. 版权所有.</p>
-                    <p>Published With <a href="http://typecho.org" target="_blank" rel="nofollow">Typecho.</a> Theme By <a href="https://github.com/Dreamer-Paul/Fantasy" target="_blank" rel="nofollow">Fantasy</a>.</p>
+                    <p>Published With <a href="http://typecho.org" target="_blank" rel="nofollow">Typecho.</a> Theme By <a href="https://github.com/cutecwc/FantasyR2-" target="_blank" rel="nofollow">FantasyR2</a>.</p>
                 </div>
             </div>
         </section>

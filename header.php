@@ -52,10 +52,10 @@
     <div class="toggle"></div>
     <div class="wrap min">
         <h1 class="headline"><span><?php $this->options->title() ?></span></h1>
-<?php if ($this->options->home_social): ?>
+<!-- <?php if ($this->options->home_social): ?>
         <div class="head-social">
 <?php $this->options->home_social() ?>
         </div>
-<?php endif; ?>
+<?php endif; ?> -->
     </div>
 </header>

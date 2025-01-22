@@ -74,7 +74,6 @@ class Fantasy {
         else if($dur < 2592000){ // 一个月内
             return floor($dur / 604800) . " 周前";
         }
-
         else{
             return date("y.m.d", $ts);
         }

@@ -71,7 +71,7 @@ aside::-webkit-scrollbar{ width: 0 }
 /* - 侧边导航 */
 .side-nav{
     z-index: 0;
-    background: #fff;
+    background: rgba(240,255,255,0.1);
     overflow: hidden;
     position: relative;
     border-radius: 0 1em 1em 0;
@@ -291,7 +291,7 @@ header, main{ margin-left: 8em; margin-bottom: 3em }
 
 .board{
     padding: 1.5em;
-    background: #fff;
+    background: rgba(255,255,255,0.7);
     border-radius: 1.5em;
 }
 .board + .board{ margin-top: 2em }
@@ -580,7 +580,8 @@ header, main{ margin-left: 8em; margin-bottom: 3em }
 -------------------------------- */
 footer{
     padding: 2em 0;
-    background: #fff;
+    /* background: #fff; */
+    background: rgba(255,255,255,0.7);
     box-shadow: 0 0 8px rgba(0, 0, 0, .1);
 }
 footer h3{ color: #666 }

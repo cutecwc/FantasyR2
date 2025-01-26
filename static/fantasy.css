@@ -499,7 +499,7 @@ header, main{ margin-left: 8em; margin-bottom: 3em }
 .comment-list .comment-author, .comment-list a{ font-weight: lighter }
 
 .comment-list .content{
-    background: rgba(255,244,251,0.67);
+    background: rgba(255,244,251,0.75);
     border-radius: .5em;
     margin: 0 0 1em 1.5em;
     word-break: break-all;

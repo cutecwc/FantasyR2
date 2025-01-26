@@ -62,9 +62,13 @@ $this->need('header.php'); ?>
         $script.='page1();';
         for($i=1;$i<=$pages;$i++) {
             $output.='<li id="page'.$i.'" >';
+
             $script.='function page'.$i.'(){var elems=document.getElementsByClassName("archive");for(var i=0;i<elems.length;i+=1){elems[i].style.display="none";};document.getElementById("archive page '.$i.'").style.display="inline";';
+
             $script.='var current=document.getElementsByClassName("current");for(var i=0;i<current.length;i+=1){current[i].setAttribute("class","")};';
+
             $script.='document.getElementById("page'.$i.'").className="current";';
+
             $output.='<a href="javascript:void(0)" onclick="page'.$i.'()">'.$i.'</a></li>';
             $script.='}';
         }
